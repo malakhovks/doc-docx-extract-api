@@ -1,0 +1,22 @@
+{
+  "name": "doc-docx-extract-api",
+  "version": "1.0.0",
+  "description": "RESTful API for text extraction from doc/docx",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malahovKS/doc-docx-extract-api.git"
+  },
+  "keywords": [
+    "\"service\""
+  ],
+  "author": "\"microservice\",",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/malahovKS/doc-docx-extract-api/issues"
+  },
+  "homepage": "https://github.com/malahovKS/doc-docx-extract-api#readme"
+}
