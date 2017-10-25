@@ -1,0 +1,51 @@
+{
+  "name": "doc-docx-extract-api",
+  "version": "1.0.0",
+  "description": "RESTful API for text extraction from doc/docx",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node server.js",
+    "start-production": "NODE_ENV=production babel-node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/malahovKS/doc-docx-extract-api.git"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "command-exists": "^1.2.2",
+    "compression": "^1.7.1",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "multer": "^1.3.0",
+    "path": "^0.12.7",
+    "winston": "^2.4.0"
+  },
+  "keywords": [
+    "service",
+    "microservice",
+    "doc",
+    "pdftotext",
+    "txt",
+    "text",
+    "docx",
+    "docx2txt",
+    "catdoc",
+    "extract",
+    "api"
+  ],
+  "author": "kirill-malakhov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/malahovKS/doc-docx-extract-api/issues"
+  },
+  "homepage": "https://github.com/malahovKS/doc-docx-extract-api#readme",
+  "engines": {
+    "node": "^6.11.0"
+  }
+}
