@@ -1,34 +1,34 @@
 import log from "../libs/log";
 import multer from "multer";
 import fs from "fs";
-import * as CATDOC from "child_process";
+import * as DOCX2TXT from "child_process";
 import commandExists from "command-exists";
 
-const UPLOADDOC = multer({dest: 'public/uploads/doc/'}).single('doc');
+const UPLOADDOCX = multer({dest: 'public/uploads/docx/'}).single('docx');
 
 module.exports = app => {
 
-	app.get("/api/doctotext", (req, res) => {
-		return res.status(200).json({status: "DOC to text/html API"});
+	app.get("/api/docxtotext", (req, res) => {
+		return res.status(200).json({status: "DOCX to text/html API"});
 
 		//TODO res.flush() (node:28258) DeprecationWarning: OutgoingMessage.flush is deprecated. Use flushHeaders instead.
 		// res.flush();
 
 	});
 
-	app.post("/api/doctotext", UPLOADDOC, (req, res) => {
+	app.post("/api/docxtotext", UPLOADDOCX, (req, res) => {
 
 		log.debug(req.headers);
 
-		if (req.file.originalname.toLowerCase().indexOf(".doc") === -1) {
+		if (req.file.originalname.toLowerCase().indexOf(".docx") === -1) {
 			res.sendStatus(400);
 			fs.unlink(req.file.path);
 			return log.error("400 Error: File upload only supports .pdf filetype");
 		}
 
-		commandExists('catdoc')
+		commandExists('docx2txt')
 			.then(() => {
-				CATDOC.exec("catdoc -d utf-8 " + req.file.path, {maxBuffer: 1000 * 1024},
+				DOCX2TXT.exec("docx2txt < " + req.file.path, {maxBuffer: 1000 * 1024},
 					(error, stdout, stderr) => {
 
 						if (error) {
