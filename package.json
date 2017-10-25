@@ -31,13 +31,15 @@
     "microservice",
     "doc",
     "pdftotext",
-    "txt",
     "text",
     "docx",
     "docx2txt",
     "catdoc",
     "extract",
-    "api"
+    "api",
+    "extract-data",
+    "restful-api",
+    "rest-api"
   ],
   "author": "kirill-malakhov",
   "license": "Apache-2.0",

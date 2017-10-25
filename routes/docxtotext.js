@@ -49,8 +49,8 @@ module.exports = app => {
 					})
 			}).catch(() => {
 			fs.unlink(req.file.path);
-			res.status(500).json({error: "Command pdftotext doesn't exist"});
-			return log.error("500 Error: Command pdftotext doesn't exist");
+			res.status(500);
+			return log.error("500 Error: Command docx2txt doesn't exist");
 		});
 
 	});
