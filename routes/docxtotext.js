@@ -9,11 +9,7 @@ const UPLOADDOCX = multer({dest: 'public/uploads/docx/'}).single('docx');
 module.exports = app => {
 
 	app.get("/api/docxtotext", (req, res) => {
-		return res.status(200).json({status: "DOCX to text/html API"});
-
-		//TODO res.flush() (node:28258) DeprecationWarning: OutgoingMessage.flush is deprecated. Use flushHeaders instead.
-		// res.flush();
-
+		return res.status(200).json({status: "OK"});
 	});
 
 	app.post("/api/docxtotext", UPLOADDOCX, (req, res) => {
