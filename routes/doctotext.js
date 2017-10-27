@@ -45,7 +45,7 @@ module.exports = app => {
 					})
 			}).catch(() => {
 			fs.unlink(req.file.path);
-			res.status(500);
+			res.sendStatus(500);
 			return log.error("500 Error: Command catdoc doesn't exist");
 		});
 
