@@ -16,7 +16,7 @@ To run program you will need:
 ##### For [Ubuntu Server Linux](https://www.ubuntu.com/download/server) distribution
 
 ```
-$ git clone https://github.com/malakhovks/pdf-extract-api.git
+$ git clone https://github.com/malakhovks/doc-docx-extract-api.git
 
 ```
 
