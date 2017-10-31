@@ -7,7 +7,7 @@ import commandExists from "command-exists";
 const UPLOADDOCX = multer({dest: 'public/uploads/docx/'}).single('docx');
 
 module.exports = app => {
-
+//TODO implement https://github.com/ankushshah89/python-docx2txt
 	app.post("/api/docxtotext", UPLOADDOCX, (req, res) => {
 
 		log.debug(req.headers);
