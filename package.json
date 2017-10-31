@@ -4,13 +4,14 @@
   "description": "RESTful API for text extraction from doc/docx",
   "main": "server.js",
   "scripts": {
-    "start": "PORT=3001 babel-node server.js",
-    "start-production": "PORT=3001 NODE_ENV=production babel-node server.js",
+    "start": "NODE_ENV=development babel-node server.js",
+    "start-development": "NODE_ENV=development babel-node server.js",
+    "start-production": "NODE_ENV=production babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/malahovKS/doc-docx-extract-api.git"
+    "url": "git+https://github.com/malakhovks/doc-docx-extract-api.git"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -18,6 +19,7 @@
     "body-parser": "^1.18.2",
     "command-exists": "^1.2.2",
     "compression": "^1.7.1",
+    "config": "^1.27.0",
     "consign": "^0.1.6",
     "cors": "^2.8.4",
     "express": "^4.16.2",
@@ -44,9 +46,9 @@
   "author": "kirill-malakhov",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/malahovKS/doc-docx-extract-api/issues"
+    "url": "https://github.com/malakhovks/doc-docx-extract-api/issues"
   },
-  "homepage": "https://github.com/malahovKS/doc-docx-extract-api#readme",
+  "homepage": "https://github.com/malakhovks/doc-docx-extract-api#readme",
   "engines": {
     "node": "^6.11.0"
   }
