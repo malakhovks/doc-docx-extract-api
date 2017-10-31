@@ -8,23 +8,19 @@ const UPLOADDOC = multer({dest: 'public/uploads/doc/'}).single('doc');
 
 module.exports = app => {
 
-	app.get("/api/doctotext", (req, res) => {
-		return res.status(200).json({status: "OK"});
-	});
-
 	app.post("/api/doctotext", UPLOADDOC, (req, res) => {
 
 		log.debug(req.headers);
 
 		if (req.file.originalname.toLowerCase().indexOf(".doc") === -1) {
-			res.sendStatus(400);
+			res.status(400).send("Wrong file type");
 			fs.unlink(req.file.path);
-			return log.error("400 Error: File upload only supports .pdf filetype");
+			return log.error("400 Error: File upload only supports .doc file type");
 		}
 
 		commandExists('catdoc')
 			.then(() => {
-				CATDOC.exec("catdoc -d utf-8 " + req.file.path, {maxBuffer: 1000 * 1024},
+				CATDOC.exec("catdoc -d utf-8 " + req.file.path, {maxBuffer: 3000 * 1024},
 					(error, stdout, stderr) => {
 
 						if (error) {

@@ -8,23 +8,19 @@ const UPLOADDOCX = multer({dest: 'public/uploads/docx/'}).single('docx');
 
 module.exports = app => {
 
-	app.get("/api/docxtotext", (req, res) => {
-		return res.status(200).json({status: "OK"});
-	});
-
 	app.post("/api/docxtotext", UPLOADDOCX, (req, res) => {
 
 		log.debug(req.headers);
 
 		if (req.file.originalname.toLowerCase().indexOf(".docx") === -1) {
-			res.sendStatus(400);
+			res.status(400).send("Wrong file type");
 			fs.unlink(req.file.path);
-			return log.error("400 Error: File upload only supports .pdf filetype");
+			return log.error("400 Error: File upload only supports .docx filetype");
 		}
 
 		commandExists('docx2txt')
 			.then(() => {
-				DOCX2TXT.exec("docx2txt < " + req.file.path, {maxBuffer: 1000 * 1024},
+				DOCX2TXT.exec("docx2txt < " + req.file.path, {maxBuffer: 3000 * 1024},
 					(error, stdout, stderr) => {
 
 						if (error) {
