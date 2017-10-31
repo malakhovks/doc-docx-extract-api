@@ -1,6 +1,6 @@
 {
   "name": "doc-docx-extract-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "RESTful API for text extraction from doc/docx",
   "main": "server.js",
   "scripts": {
@@ -13,6 +13,10 @@
     "type": "git",
     "url": "git+https://github.com/malakhovks/doc-docx-extract-api.git"
   },
+  "bugs": {
+    "url": "https://github.com/malakhovks/doc-docx-extract-api/issues"
+  },
+  "homepage": "https://github.com/malakhovks/doc-docx-extract-api#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
@@ -45,10 +49,6 @@
   ],
   "author": "kirill-malakhov",
   "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/malakhovks/doc-docx-extract-api/issues"
-  },
-  "homepage": "https://github.com/malakhovks/doc-docx-extract-api#readme",
   "engines": {
     "node": "^6.11.0"
   }
