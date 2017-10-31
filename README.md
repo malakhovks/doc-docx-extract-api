@@ -19,6 +19,8 @@ To run program you will need:
 $ git clone https://github.com/malakhovks/doc-docx-extract-api.git
 
 ```
+###### install-dependencies-ubuntu.sh Coming soon
+
 
 ### Use cases
 
