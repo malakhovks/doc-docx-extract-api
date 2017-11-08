@@ -1,6 +1,6 @@
 # Atomic Web Service (AWS, REST API) for converting DOC/DOCX files to plain/text, powered by [catdoc](http://www.wagner.pp.ru/~vitus/software/catdoc/), [docx2txt](http://docx2txt.sourceforge.net/) and [Node.js](https://nodejs.org)
 
-Part of the "Automated scientific research workstation" atomic web services ecosystem.
+Part of the ["Personal Research Information System"](http://icybcluster.org.ua:34145/) atomic web services ecosystem.
 
 ### Requirements/Dependencies
 
